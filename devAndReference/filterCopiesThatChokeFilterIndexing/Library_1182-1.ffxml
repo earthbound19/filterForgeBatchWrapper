@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Filter>
+	<Components>
+		<Result id="result">
+			<SurfaceColor source="profilegradient 01" red="1" green="0" blue="1" alpha="1"/>
+			<Height source="profilegradient 01"/>
+			<Reflectivity value="0"/>
+			<ReflectionBlur value="0"/>
+			<Metallic value="0"/>
+			<FilterType value="1"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+		</Result>
+		<ElevationGradient id="elevationgradient 01">
+			<Elevation source="image 01"/>
+			<Gradient source="kaleidoscope 01"/>
+			<Flip value="false"/>
+			<Repeat value="1"/>
+		</ElevationGradient>
+		<Image id="image 01"/>
+		<IntSliderControl id="intslidercontrol 01">
+			<Name value-en="Color Mode"/>
+			<UseRemapping value="false"/>
+			<Value value="3"/>
+			<RangeMax value="7"/>
+		</IntSliderControl>
+		<Kaleidoscope id="kaleidoscope 01">
+			<Mode source="intslidercontrol 01" value="0"/>
+			<Source source="pavements 01"/>
+			<OffsetH source="slidercontrol 01" value="0.55">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</OffsetH>
+			<OffsetV value="0.19"/>
+			<ShapeSize source="slidercontrol 05" value="0.81">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</ShapeSize>
+			<RepeatH value="1"/>
+			<RepeatV value="1"/>
+		</Kaleidoscope>
+		<Levels id="levels 01">
+			<Source source="tonecurve 01"/>
+			<BlackPoint source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</BlackPoint>
+			<Gamma source="slidercontrol 03" value="0">
+				<Minimum value="-1"/>
+				<Maximum value="1"/>
+			</Gamma>
+			<WhitePoint source="slidercontrol 04" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</WhitePoint>
+			<PreserveColor value="false"/>
+		</Levels>
+		<Pavements id="pavements 01">
+			<Color red="0.94186" green="0.135073" blue="0.135073" alpha="1"/>
+			<Mortar red="0" green="0" blue="0" alpha="1"/>
+			<HRange value="0.37"/>
+			<LRange value="0.98"/>
+			<SRange value="0.25"/>
+			<MortarWidth value="0"/>
+			<BevelWidth value="0.47"/>
+			<Corners value="0.5"/>
+			<Bond value="0"/>
+			<FillMode value="0"/>
+			<Repeat value="1"/>
+			<Chaos value="0.15"/>
+			<Variation value="1"/>
+			<Bevel value="0"/>
+		</Pavements>
+		<PerlinNoise id="perlinnoise 01">
+			<Noise red="1" green="1" blue="1" alpha="1"/>
+			<Background red="0" green="0" blue="0" alpha="1"/>
+			<Roughness value="1"/>
+			<Scale value="2.97"/>
+			<Stretch value="0.08"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Contrast value="0.63"/>
+			<Variation value="1"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<ProfileGradient id="profilegradient 01">
+			<Color1 source="levels 01" red="0" green="0" blue="0" alpha="1"/>
+			<Color2 red="1" green="1" blue="1" alpha="1"/>
+			<Offset source="perlinnoise 01" value="0"/>
+			<Rotate value="0"/>
+			<Repeat value="1"/>
+			<Profile value="0"/>
+			<Mirror value="false"/>
+		</ProfileGradient>
+		<SliderControl id="slidercontrol 01">
+			<Name value-en="Color Shift"/>
+			<UseRemapping value="false"/>
+			<Value value="0.76"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 02">
+			<Name value-en="Black Point"/>
+			<UseRemapping value="false"/>
+			<Value value="0.46"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 03">
+			<Name value-en="Gamma"/>
+			<UseRemapping value="false"/>
+			<Value value="0.2"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 04">
+			<Name value-en="White Point"/>
+			<UseRemapping value="false"/>
+			<Value value="1"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 05">
+			<Name value-en="Color Amount"/>
+			<UseRemapping value="false"/>
+			<Value value="0.32"/>
+		</SliderControl>
+		<StairsCurve id="stairscurve 01">
+			<Threshold value="0.57"/>
+			<Smooth value="1"/>
+			<Start value="0"/>
+			<End value="1"/>
+			<Minimum value="0"/>
+			<Maximum value="1"/>
+			<Steps value="1"/>
+			<Linear value="false"/>
+			<Invert value="false"/>
+		</StairsCurve>
+		<ToneCurve id="tonecurve 01">
+			<Source source="elevationgradient 01"/>
+			<Curve source="stairscurve 01"/>
+			<PreserveColor value="true"/>
+		</ToneCurve>
+	</Components>
+	<Presets>
+		<DefaultPreset>
+			<Settings size_factor="600" variation="1" seamless="false" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="3"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.76"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.46"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.2"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.32"/>
+				</SliderControl>
+			</Controls>
+		</DefaultPreset>
+		<Preset>
+			<Settings size_factor="600" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="3"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.41"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.99"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.32"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.32"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="600" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="3"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.41"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.99"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.32"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.05"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="600" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="3"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.41"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.99"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.32"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.09"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="600" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="1"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.2"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.42"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.46"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.36"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="600" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="1"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.2"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.48"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.46"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.14"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="10" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="3"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.59"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.48"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.5"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.46"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.41"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="300" variation="25122" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.2"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="4"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.48"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.8"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.24"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.2"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.08"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset>
+			<Settings size_factor="300" variation="9676" seamless="true" antialiasing="2" map_type="0" edges_only="true"/>
+			<Lighting>
+				<Height value="0.0343897"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="0.632845"/>
+					<Saturation value="0.805377"/>
+					<Rotation value="22.8964"/>
+				</Environment>
+			</Lighting>
+			<Controls>
+				<IntSliderControl id="intslidercontrol 01">
+					<Value value="6"/>
+				</IntSliderControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.820723"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.43"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.99"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0.5"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+	</Presets>
+	<Information author="CFandM" name-en="Colorful Sketching Chalk" url="" description-en="This filter takes an original image and applies a chalk look to it. Use the size slider for a more wet look. Use variations for more colors. [br]Use the color shift slider to also change colors." keywords-en="chalk, wet, dry, sketch, colorful" update_notes-en="" major_version="1" minor_version="3"/>
+	<ControlsOrder>
+		<Automatic value="false"/>
+		<Items>
+			<Item id="slidercontrol 02" order="0"/>
+			<Item id="slidercontrol 03" order="1"/>
+			<Item id="slidercontrol 04" order="2"/>
+			<Item id="intslidercontrol 01" order="3"/>
+			<Item id="slidercontrol 01" order="4"/>
+			<Item id="slidercontrol 05" order="5"/>
+		</Items>
+	</ControlsOrder>
+	<FilterEditor>
+		<ThumbnailSize value="1"/>
+		<Viewport left="0" top="0" zoom_factor="-2"/>
+		<Item id="elevationgradient 01">
+			<Position left="928" top="-256"/>
+		</Item>
+		<Item id="image 01">
+			<Position left="1376" top="-352"/>
+		</Item>
+		<Item id="intslidercontrol 01">
+			<Position left="1312" top="64"/>
+		</Item>
+		<Item id="kaleidoscope 01">
+			<Position left="1184" top="-160"/>
+		</Item>
+		<Item id="levels 01">
+			<Position left="384" top="-160"/>
+		</Item>
+		<Item id="pavements 01">
+			<Position left="1440" top="-192"/>
+		</Item>
+		<Item id="perlinnoise 01">
+			<Position left="416" top="16"/>
+		</Item>
+		<Item id="profilegradient 01">
+			<Position left="192" top="-16"/>
+		</Item>
+		<Item id="result">
+			<Position left="-96" top="16"/>
+		</Item>
+		<Item id="slidercontrol 01">
+			<Position left="1248" top="0"/>
+		</Item>
+		<Item id="slidercontrol 02">
+			<Position left="672" top="0"/>
+		</Item>
+		<Item id="slidercontrol 03">
+			<Position left="672" top="96"/>
+		</Item>
+		<Item id="slidercontrol 04">
+			<Position left="640" top="160"/>
+		</Item>
+		<Item id="slidercontrol 05">
+			<Position left="1344" top="160"/>
+		</Item>
+		<Item id="stairscurve 01">
+			<Position left="928" top="-64"/>
+		</Item>
+		<Item id="tonecurve 01">
+			<Position left="672" top="-192"/>
+		</Item>
+	</FilterEditor>
+</Filter>

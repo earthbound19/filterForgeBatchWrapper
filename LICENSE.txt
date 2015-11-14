@@ -1,0 +1,35 @@
+=ABSA-FREAKING-LUTELY ANYTHING LICENSE 1.0=
+
+==By Richard Alexander Hall==
+
+This license is an instance of the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication, the text of which is available at:   http://creativecommons.org/publicdomain/zero/1.0/
+
+==WHAT ON EARTH DOES THIS MEAN?==
+
+[Insert your own pithy summary here of the fact that anyone can do effectively anything at all with the work accompanying this license, without even asking the author or attributing the work to this author.]
+
+==IRRELEVANT TRIVIA==
+"Freaking" is a minced curse for a much stronger word, which I was extremely tempted to use both in the title and text of this license, after I read so many different licenses of so many different works, and so many internet arcticles explaining the intricate and strained terms of those licenses, and threw my hands up in the air and said to myself, "I would love to release any work of value to the world, without any of these excruciatingly painful terms!"\n==RELEVANT NOTE== I dedicate the text of this license itself to the Public Domain, under the very same terms of this license itself. Whoa, meta! I suggest that in any reuse or adaptation of this license, you simply change the text of the "WHAT ON EARTH DOES THIS MEAN?" section, to suit your own work. 
+
+==THIS WOULD BE A PREAMBLE IF IT ADDED ANYTHING OF WORTH TO THE PRECEDING AND IF IT CAME BEFORE IT==
+
+Perhaps you have encountered some licenses which, in order for you to use and/or redistribute some body of work, require you to do this or that, such as duplicate a copyright notice (which might be embodied in something vaguely in the form of that which you now read) with every copy or redistribution which you may make of the work, or perhaps the license forbids you to make any copies of the work at all (outside of legal exceptions like Fair Use), while restricting use of your copy of the work for only personal or organizational use. Perhaps you are very tired of reading such requirements or restrictions. If so, this license is for you! This license does not demand anything of you! The author(s) ("author") of the work which accompanies this notice--if in fact you are reading or have recieved this notice in correlation with the receipt and/or other use of any work, and if the author of any such work may be identified--the author of this work hereby grants to you all possible rights related to or inherent in the use, modification, or freaking anything else having to do with this freaking work. The way that he does this is by connecting this text to the terms of the CC0 1.0 Universal (CC0 1.0) Public Domain Dedication, as linked to above, which effectively says: "I dedicate this work to the public domain by waiving all of my rights to the work worldwide under copyright law, including all related and neighboring rights, to the extent allowed by law. You can copy, modify, distribute and perform the work, even for commercial purposes, all without asking permission." In other words, you may do absolutely freaking ANYTHING with this work, without asking me! Possibilites include: Eat this work with Green Eggs and Ham! Make copies of the work, or redistributions of the work, without crediting me! Copy or do not copy this notice with any copies or redistributions you make of the work! Pick your nose with this work, IN REVERSE-TIME! Unrelated to any use of any work in conjuntion with this notice (or so it is hoped), please know that: 1. The title of this license may be considered only a name, as this license would still be whatever it is, given any other name, such as "rose--" although this license most certainly is not named "rose." 2. Okay. Only one requirement, for legal sanity. The author of this license requires that in any arbitration or legal allegation or procedural purposes, etcetera, related to this license (or any accompanying work), that the first three instances of the word "freaking" be omitted from the "THIS WOULD BE A PREAMBLE IF IT ADDED ANYTHING OF WORTH TO THE PRECEDING AND IF IT CAME BEFORE IT" section of this license for all reading, interpretive, and other explanatory or practial use related to said purposes, for simple purposes of clear explanation; as it may not have ever been established (to the knowledge of the writer of this license) in any court of law what "freaking" means, for legal practical purposes, as expressed in the term "freaking anything."
+
+==SPECIAL NOTE TO LAWYERS AND OTHER NIT-PICKS==
+
+3. Okay, SHEESH, I guess there's ONE MORE THING: I absolutely do not care about any comment you may have relating to how the claims or forfiet of claims, etc. inherent in this license do or do not legally hold up. If it absolutely comes to it though: THIS IS NOT IN FACT A LICENSE. THIS IS A NOTICE THAT BOTH THE WORK(S) ACCOMPANYING THIS TEXT, AS WELL AS THIS TEXT ITSELF, ARE DEDICATED TO THE PUBLIC DOMAIN UNDER THE TERMS OF THE CC0 1.0 Universal (CC0 1.0) Public Domain Dedication, the text of which is available at: http://creativecommons.org/publicdomain/zero/1.0/
+
+==ADDEDNUM==
+
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.
+
+In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.
+
+SORRY ABOUT THE FOLLOWING ALL CAPS. LAWYERS SEEM TO THINK IT MAKES THE WORDS REALLY MATTER, LIKE A PARENT SHOUTING AS THEY COUNT DOWN FROM 10.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org>, or, if you prefer, http://earthbound.io/legal/absa-freaking-lutely-anything-license1.0.txt, from which a full text copy preceded.

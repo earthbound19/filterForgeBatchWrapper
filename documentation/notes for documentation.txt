@@ -1,0 +1,2 @@
+; NOTE that the following will cause variant renders of a same image to fail:
+Render Only One Random Filter Per Image=True
