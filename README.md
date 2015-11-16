@@ -5,7 +5,13 @@ Wraps Filter Forge's command line tool (FFXCmdRenderer-x86.exe at this writing),
 See FilterForgeBatchWrapper_Help.pdf, archived in FilterForgeBatchWrapperDist.7z, which you must extract using e.g. 7-zip (http://www.7-zip.org/).
 
 ### LICENSE
-See LICENSE.txt.
+Public Domain; see LICENSE.txt.
+
+### SOURCE CODE REPOSITORY
+https://github.com/r-alex-hall/filterForgeBatchWrapper
+
+### DISTRIBUTION REPOSITORY
+http://sourceforge.net/projects/filterforgebatchwrapper/ (give same file as the .7z distribution archive at the source repository)
 
 ### DEPENDENCIES
 Filter Forge command-line renderer, sed from GNUwin32 CoreUtils (included--or use any other compatible sed package, possibly for example from cygwin, etc), source images.
