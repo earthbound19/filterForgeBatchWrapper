@@ -10,7 +10,12 @@ See LICENSE.txt.
 ### DEPENDENCIES
 Filter Forge command-line renderer, sed from GNUwin32 CoreUtils (included--or use any other compatible sed package, possibly for example from cygwin, etc), source images.
 
+### CONTACT
+Alex Hall, http://earthbound.io/contact
+
 # RELEASE HISTORY
+
+Expanded/improved documentation, fix README.md with actual contact URL :) 11/15/2015 09:21:10 PM -RAH
 
 V. 0.9.7 FEATURE ADDITIONS and BUG FIXES
 Drag and drop a folder onto ffBatch.exe to override the render path subfolders to that directory (results will render to a new ff_output subfolder of that folder, etc). Option to render only one filter for each source file, the filter being randomly selected anew for each image. Enabled if Render Only One Random Filter Per Image in the .ini file is set to True. BUG FIX: Source image file names with spaces in the file name caused failed renders.
