@@ -7,6 +7,7 @@ Library_5531-1.ffxml = Crosshatch Drawing
 Library_12555-1.ffxml = Hatches
 Library_11261-1.ffxml = CrossHatch (meh, depending)
 Library_8766-1.ffxml = Engraving
+Library_10964-1.ffxml = Side by Side--Wonderful sort of neoplasticism converter
 Library_208-2.ffxml = Foxee's Weather Damage (variants 5 and 6 colorful)
 Library_6609-1 = OneMillionAlphas (excellent results from randomization)
 Library_4874-2.ffxml = abstract extreme

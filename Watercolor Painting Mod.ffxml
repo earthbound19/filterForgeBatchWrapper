@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Filter>
+	<Components>
+		<Result id="result">
+			<Source source="blend4 10"/>
+			<FilterType value="0"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+		</Result>
+		<BiasCurve id="biascurve 01">
+			<Bias source="perlinnoise 06" value="0.59999999999999998"/>
+			<Start value="0"/>
+			<End value="1"/>
+			<Minimum value="0"/>
+			<Maximum value="1"/>
+			<Invert value="false"/>
+		</BiasCurve>
+		<Blend4 id="blend4 01">
+			<Mode value="0"/>
+			<Foreground source="threshold 02" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="1"/>
+			<Opacity source="threshold 01" value="1"/>
+		</Blend4>
+		<Blend4 id="blend4 02">
+			<Mode value="0"/>
+			<Foreground source="tonecurve 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="0"/>
+			<Opacity source="invert 01" value="0.5"/>
+		</Blend4>
+		<Blend4 id="blend4 03">
+			<Mode value="0"/>
+			<Foreground source="threshold 03" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="1"/>
+			<Opacity source="threshold 02" value="1"/>
+		</Blend4>
+		<Blend4 id="blend4 04">
+			<Mode value="0"/>
+			<Foreground source="tonecurve 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="0"/>
+			<Opacity source="invert 02" value="0.5"/>
+		</Blend4>
+		<Blend4 id="blend4 05">
+			<Mode value="0"/>
+			<Foreground source="threshold 04" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="1"/>
+			<Opacity source="threshold 03" value="1"/>
+		</Blend4>
+		<Blend4 id="blend4 06">
+			<Mode value="0"/>
+			<Foreground source="tonecurve 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="0"/>
+			<Opacity source="invert 03" value="0.5"/>
+		</Blend4>
+		<Blend4 id="blend4 07">
+			<Mode value="0"/>
+			<Foreground source="tonecurve 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="0"/>
+			<Opacity source="invert 04" value="0.5"/>
+		</Blend4>
+		<Blend4 id="blend4 08">
+			<Mode value="7"/>
+			<Foreground source="invert 05" red="1" green="1" blue="1" alpha="1"/>
+			<Background source="image 01" red="0" green="0" blue="0" alpha="1"/>
+			<Opacity value="1"/>
+		</Blend4>
+		<Blend4 id="blend4 09">
+			<Mode value="0"/>
+			<Foreground source="tonecurve 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="1" green="1" blue="1" alpha="0"/>
+			<Opacity source="threshold 04" value="0.5"/>
+		</Blend4>
+		<Blend4 id="blend4 10">
+			<Mode value="2"/>
+			<Foreground source="blend4 08" red="1" green="1" blue="1" alpha="1"/>
+			<Background source="multiblend 01" red="0" green="0" blue="0" alpha="1"/>
+			<Opacity source="slidercontrol 06" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Opacity>
+		</Blend4>
+		<Blur id="blur 01">
+			<Source source="image 01"/>
+			<Radius value="0.002"/>
+			<Gaussian value="true"/>
+		</Blur>
+		<Image id="image 01"/>
+		<Invert id="invert 01">
+			<Source source="blend4 01"/>
+			<Invert value="true"/>
+		</Invert>
+		<Invert id="invert 02">
+			<Source source="blend4 03"/>
+			<Invert value="true"/>
+		</Invert>
+		<Invert id="invert 03">
+			<Source source="blend4 05"/>
+			<Invert value="true"/>
+		</Invert>
+		<Invert id="invert 04">
+			<Source source="threshold 01"/>
+			<Invert value="true"/>
+		</Invert>
+		<Invert id="invert 05">
+			<Source source="blur 01"/>
+			<Invert value="true"/>
+		</Invert>
+		<Levels id="levels 01">
+			<Source source="blend4 08"/>
+			<BlackPoint value="0.5"/>
+			<Gamma value="0"/>
+			<WhitePoint value="1"/>
+			<PreserveColor value="false"/>
+		</Levels>
+		<Multiblend id="multiblend 01">
+			<Layer7 source="noisedistortion 01" red="1" green="0.066000000000000003" blue="0" alpha="1"/>
+			<Opacity7 value="1"/>
+			<Layer6 source="noisedistortion 02" red="1" green="0.77200000000000002" blue="0.113" alpha="1"/>
+			<Opacity6 source="perlinnoise 05" value="1"/>
+			<Layer5 source="noisedistortion 03" red="1" green="1" blue="0.16800000000000001" alpha="1"/>
+			<Opacity5 source="perlinnoise 05" value="1"/>
+			<Layer4 source="noisedistortion 04" red="0.125" green="1" blue="0.184" alpha="1"/>
+			<Opacity4 source="perlinnoise 05" value="1"/>
+			<Layer3 source="noisedistortion 05" red="0" green="1" blue="1" alpha="1"/>
+			<Opacity3 source="perlinnoise 05" value="1"/>
+			<Layer2 red="1" green="1" blue="1" alpha="1"/>
+			<Opacity2 value="1"/>
+			<Layer1 red="0" green="0" blue="0.99199999999999999" alpha="1"/>
+			<Opacity1 value="0"/>
+		</Multiblend>
+		<NoiseDistortion id="noisedistortion 01">
+			<Source source="tonecurve 03"/>
+			<Distortion source="slidercontrol 05" value="0.02">
+				<Minimum value="0"/>
+				<Maximum value="0.02"/>
+			</Distortion>
+			<Roughness source="slidercontrol 03" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Roughness>
+			<Scale source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="3"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Variation value="1"/>
+		</NoiseDistortion>
+		<NoiseDistortion id="noisedistortion 02">
+			<Source source="tonecurve 02"/>
+			<Distortion source="slidercontrol 05" value="0.02">
+				<Minimum value="0"/>
+				<Maximum value="0.02"/>
+			</Distortion>
+			<Roughness source="slidercontrol 03" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Roughness>
+			<Scale source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="3"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Variation value="26077"/>
+		</NoiseDistortion>
+		<NoiseDistortion id="noisedistortion 03">
+			<Source source="tonecurve 04"/>
+			<Distortion source="slidercontrol 05" value="0.02">
+				<Minimum value="0"/>
+				<Maximum value="0.02"/>
+			</Distortion>
+			<Roughness source="slidercontrol 03" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Roughness>
+			<Scale source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="3"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Variation value="9231"/>
+		</NoiseDistortion>
+		<NoiseDistortion id="noisedistortion 04">
+			<Source source="tonecurve 05"/>
+			<Distortion source="slidercontrol 05" value="0.02">
+				<Minimum value="0"/>
+				<Maximum value="0.02"/>
+			</Distortion>
+			<Roughness source="slidercontrol 03" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Roughness>
+			<Scale source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="3"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Variation value="23077"/>
+		</NoiseDistortion>
+		<NoiseDistortion id="noisedistortion 05">
+			<Source source="tonecurve 06"/>
+			<Distortion source="slidercontrol 05" value="0.02">
+				<Minimum value="0"/>
+				<Maximum value="0.02"/>
+			</Distortion>
+			<Roughness source="slidercontrol 03" value="1">
+				<Minimum value="0"/>
+				<Maximum value="1"/>
+			</Roughness>
+			<Scale source="slidercontrol 02" value="0">
+				<Minimum value="0"/>
+				<Maximum value="3"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Variation value="20308"/>
+		</NoiseDistortion>
+		<PerlinNoise id="perlinnoise 05">
+			<Noise red="1" green="1" blue="1" alpha="1"/>
+			<Background source="slidercontrol 04" red="0" green="0" blue="0" alpha="1">
+				<Minimum red="0.33000000000000002" green="0.33000000000000002" blue="0.33000000000000002" alpha="1"/>
+				<Maximum red="1" green="1" blue="1" alpha="1"/>
+			</Background>
+			<Roughness value="1"/>
+			<Scale value="2.3700000000000001"/>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Contrast value="0"/>
+			<Variation value="16616"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<PerlinNoise id="perlinnoise 06">
+			<Noise source="slidercontrol 08" red="1" green="1" blue="1" alpha="1">
+				<Minimum red="0.5" green="0.5" blue="0.5" alpha="1"/>
+				<Maximum red="1" green="1" blue="1" alpha="1"/>
+			</Noise>
+			<Background source="slidercontrol 08" red="0" green="0" blue="0" alpha="1">
+				<Minimum red="0.5" green="0.5" blue="0.5" alpha="1"/>
+				<Maximum red="0" green="0" blue="0" alpha="1"/>
+			</Background>
+			<Roughness source="slidercontrol 07" value="0.89000000000000001">
+				<Minimum value="0.5"/>
+				<Maximum value="0.84999999999999998"/>
+			</Roughness>
+			<Scale source="slidercontrol 01" value="2.3700000000000001">
+				<Minimum value="1.5"/>
+				<Maximum value="2.7999999999999998"/>
+			</Scale>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="1"/>
+			<Contrast value="0.33000000000000002"/>
+			<Variation value="4391"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<SliderControl id="slidercontrol 01">
+			<Name value-en="Noise Scale"/>
+			<UseRemapping value="true"/>
+			<Value value="0.75"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 02">
+			<Name value-en="Distortion Scale"/>
+			<UseRemapping value="false"/>
+			<Value value="0.54000000000000004"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 03">
+			<Name value-en="Roughness"/>
+			<UseRemapping value="false"/>
+			<Value value="0.62"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 04">
+			<Name value-en="Paint Opacity"/>
+			<UseRemapping value="true"/>
+			<Value value="0.59999999999999998"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 05">
+			<Name value-en="Distortion"/>
+			<UseRemapping value="true"/>
+			<Value value="0"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 06">
+			<Name value-en="Contour"/>
+			<UseRemapping value="false"/>
+			<Value value="1"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 07">
+			<Name value-en="Noise Roughness"/>
+			<UseRemapping value="true"/>
+			<Value value="0.69999999999999996"/>
+		</SliderControl>
+		<SliderControl id="slidercontrol 08">
+			<Name value-en="Noise Contrast"/>
+			<UseRemapping value="true"/>
+			<Value value="0.96999999999999997"/>
+		</SliderControl>
+		<StairsCurve id="stairscurve 01">
+			<Threshold value="0"/>
+			<Smooth value="0"/>
+			<Start value="0"/>
+			<End value="1"/>
+			<Minimum value="0"/>
+			<Maximum value="1"/>
+			<Steps value="5"/>
+			<Linear value="false"/>
+			<Invert value="false"/>
+		</StairsCurve>
+		<Threshold id="threshold 01">
+			<Source source="blur 01"/>
+			<Threshold value="0.20000000000000001"/>
+			<Smooth value="0"/>
+			<Low red="0" green="0" blue="0" alpha="1"/>
+			<High red="1" green="1" blue="1" alpha="1"/>
+		</Threshold>
+		<Threshold id="threshold 02">
+			<Source source="blur 01"/>
+			<Threshold value="0.40000000000000002"/>
+			<Smooth value="0"/>
+			<Low red="0" green="0" blue="0" alpha="1"/>
+			<High red="1" green="1" blue="1" alpha="1"/>
+		</Threshold>
+		<Threshold id="threshold 03">
+			<Source source="blur 01"/>
+			<Threshold value="0.59999999999999998"/>
+			<Smooth value="0"/>
+			<Low red="0" green="0" blue="0" alpha="1"/>
+			<High red="1" green="1" blue="1" alpha="1"/>
+		</Threshold>
+		<Threshold id="threshold 04">
+			<Source source="blur 01"/>
+			<Threshold value="0.80000000000000004"/>
+			<Smooth value="0"/>
+			<Low red="0" green="0" blue="0" alpha="1"/>
+			<High red="1" green="1" blue="1" alpha="1"/>
+		</Threshold>
+		<ToneCurve id="tonecurve 01">
+			<Source source="blur 01"/>
+			<Curve source="stairscurve 01"/>
+			<PreserveColor value="true"/>
+		</ToneCurve>
+		<ToneCurve id="tonecurve 02">
+			<Source source="blend4 02"/>
+			<Curve source="biascurve 01"/>
+			<PreserveColor value="false"/>
+		</ToneCurve>
+		<ToneCurve id="tonecurve 03">
+			<Source source="blend4 07"/>
+			<Curve source="biascurve 01"/>
+			<PreserveColor value="false"/>
+		</ToneCurve>
+		<ToneCurve id="tonecurve 04">
+			<Source source="blend4 04"/>
+			<Curve source="biascurve 01"/>
+			<PreserveColor value="false"/>
+		</ToneCurve>
+		<ToneCurve id="tonecurve 05">
+			<Source source="blend4 06"/>
+			<Curve source="biascurve 01"/>
+			<PreserveColor value="false"/>
+		</ToneCurve>
+		<ToneCurve id="tonecurve 06">
+			<Source source="blend4 09"/>
+			<Curve source="biascurve 01"/>
+			<PreserveColor value="false"/>
+		</ToneCurve>
+	</Components>
+	<GroupNames/>
+	<SettingsOverride>
+		<Size value="0"/>
+		<Variation value="0"/>
+		<Seamless value="0"/>
+		<ResultBlending value="0"/>
+	</SettingsOverride>
+	<Presets>
+		<DefaultPreset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="19231" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.75"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.54000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.62"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.59999999999999998"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.69999999999999996"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.96999999999999997"/>
+				</SliderControl>
+			</Controls>
+		</DefaultPreset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="10910" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.75"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.54000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.62"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.59999999999999998"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.69999999999999996"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.96999999999999997"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="4" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.75"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.54000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.62"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.59999999999999998"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.69999999999999996"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.96999999999999997"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="1" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.67000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.80000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.68999999999999995"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.73999999999999999"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.39000000000000001"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.75"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="5465" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.29184548058167398"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.56354884363876101"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.62674128153675301"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.59249346358351995"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="0.81093537798660598"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.47794327860602298"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.65728220793292003"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="16861" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.601408623904646"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.93069161145514401"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.14733474056578"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.33814740941773502"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="0.93824736398563102"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.99863824294816605"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.40945534147762502"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="16342" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.97999999999999998"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.76000000000000001"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.13"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="0.89993821592067302"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.14000000000000001"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.88126105297415602"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="1" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.82999999999999996"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.54000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.62"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.80000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="1"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.80000000000000004"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="1"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+		<Preset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1" variation="24774" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.20000000000000001"/>
+				<Environment>
+					<Source value=""/>
+					<Brightness value="1"/>
+					<Saturation value="1"/>
+					<Rotation value="0"/>
+					<RotationAxis x="0" y="0" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.236719605157487"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 02">
+					<Value value="0.71999999999999997"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 03">
+					<Value value="0.063838280301465794"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 04">
+					<Value value="0.524633686768186"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 05">
+					<Value value="0"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 06">
+					<Value value="0.58957433728015696"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 07">
+					<Value value="0.0286032450518586"/>
+				</SliderControl>
+				<SliderControl id="slidercontrol 08">
+					<Value value="0.076579700725423"/>
+				</SliderControl>
+			</Controls>
+		</Preset>
+	</Presets>
+	<Information author="Alex" name-en="Watercolor Painting Mod" url="" description-en="Turns your image into a watercolor painting." keywords-en="artistic watercolor painting" update_notes-en="Turns your image to watercolor painting." major_version="4" minor_version="12"/>
+	<ControlsOrder>
+		<Automatic value="true"/>
+	</ControlsOrder>
+	<FilterEditor>
+		<Groups/>
+		<ThumbnailSize value="1"/>
+		<Canvas left="-1381" top="103" zoom_factor="0"/>
+		<Viewport left="0" top="0" zoom_factor="2"/>
+		<LockPreview>
+			<Locked value="false"/>
+			<LockedComponent name=""/>
+		</LockPreview>
+		<Item id="biascurve 01">
+			<Position left="-432" top="656"/>
+		</Item>
+		<Item id="blend4 01">
+			<Position left="80" top="-112"/>
+		</Item>
+		<Item id="blend4 02">
+			<Position left="-432" top="-240"/>
+		</Item>
+		<Item id="blend4 03">
+			<Position left="64" top="128"/>
+		</Item>
+		<Item id="blend4 04">
+			<Position left="-432" top="-32"/>
+		</Item>
+		<Item id="blend4 05">
+			<Position left="48" top="336"/>
+		</Item>
+		<Item id="blend4 06">
+			<Position left="-432" top="224"/>
+		</Item>
+		<Item id="blend4 07">
+			<Position left="-432" top="-464"/>
+		</Item>
+		<Item id="blend4 08">
+			<Position left="-32" top="-1072"/>
+		</Item>
+		<Item id="blend4 09">
+			<Position left="-432" top="432"/>
+		</Item>
+		<Item id="blend4 10">
+			<Position left="-2000" top="-400"/>
+		</Item>
+		<Item id="blur 01">
+			<Position left="752" top="-80"/>
+		</Item>
+		<Item id="image 01">
+			<Position left="1056" top="-224"/>
+		</Item>
+		<Item id="invert 01">
+			<Position left="-128" top="-112"/>
+		</Item>
+		<Item id="invert 02">
+			<Position left="-128" top="128"/>
+		</Item>
+		<Item id="invert 03">
+			<Position left="-144" top="336"/>
+		</Item>
+		<Item id="invert 04">
+			<Position left="-112" top="-304"/>
+		</Item>
+		<Item id="invert 05">
+			<Position left="304" top="-1120"/>
+		</Item>
+		<Item id="levels 01">
+			<Position left="-288" top="-1072"/>
+		</Item>
+		<Item id="multiblend 01">
+			<Position left="-1664" top="-384"/>
+		</Item>
+		<Item id="noisedistortion 01">
+			<Position left="-1248" top="-480"/>
+		</Item>
+		<Item id="noisedistortion 02">
+			<Position left="-1248" top="-304"/>
+		</Item>
+		<Item id="noisedistortion 03">
+			<Position left="-1248" top="-64"/>
+		</Item>
+		<Item id="noisedistortion 04">
+			<Position left="-1248" top="144"/>
+		</Item>
+		<Item id="noisedistortion 05">
+			<Position left="-1248" top="352"/>
+		</Item>
+		<Item id="perlinnoise 05">
+			<Position left="-1232" top="-832"/>
+		</Item>
+		<Item id="perlinnoise 06">
+			<Position left="-208" top="624"/>
+		</Item>
+		<Item id="result">
+			<Position left="-2240" top="-400"/>
+		</Item>
+		<Item id="slidercontrol 01">
+			<Position left="128" top="704"/>
+		</Item>
+		<Item id="slidercontrol 02">
+			<Position left="-816" top="864"/>
+		</Item>
+		<Item id="slidercontrol 03">
+			<Position left="-816" top="784"/>
+		</Item>
+		<Item id="slidercontrol 04">
+			<Position left="-816" top="-848"/>
+		</Item>
+		<Item id="slidercontrol 05">
+			<Position left="-816" top="688"/>
+		</Item>
+		<Item id="slidercontrol 06">
+			<Position left="-1664" top="-80"/>
+		</Item>
+		<Item id="slidercontrol 07">
+			<Position left="128" top="624"/>
+		</Item>
+		<Item id="slidercontrol 08">
+			<Position left="128" top="560"/>
+		</Item>
+		<Item id="stairscurve 01">
+			<Position left="336" top="-400"/>
+		</Item>
+		<Item id="threshold 01">
+			<Position left="336" top="-192"/>
+		</Item>
+		<Item id="threshold 02">
+			<Position left="336" top="-32"/>
+		</Item>
+		<Item id="threshold 03">
+			<Position left="336" top="128"/>
+		</Item>
+		<Item id="threshold 04">
+			<Position left="336" top="288"/>
+		</Item>
+		<Item id="tonecurve 01">
+			<Position left="48" top="-560"/>
+		</Item>
+		<Item id="tonecurve 02">
+			<Position left="-784" top="-240"/>
+		</Item>
+		<Item id="tonecurve 03">
+			<Position left="-784" top="-464"/>
+		</Item>
+		<Item id="tonecurve 04">
+			<Position left="-784" top="-32"/>
+		</Item>
+		<Item id="tonecurve 05">
+			<Position left="-800" top="208"/>
+		</Item>
+		<Item id="tonecurve 06">
+			<Position left="-800" top="432"/>
+		</Item>
+	</FilterEditor>
+</Filter>

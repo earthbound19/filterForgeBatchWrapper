@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Filter>
+	<Components>
+		<Result id="result">
+			<SurfaceColor source="blend 02" red="1" green="1" blue="1" alpha="1"/>
+			<Height source="blend 01"/>
+			<Reflectivity value="0.25"/>
+			<ReflectionBlur value="0.25"/>
+			<Metallic value="0"/>
+			<FilterType value="1"/>
+			<Lighting>
+				<Height value="0.25"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1.7"/>
+					<Saturation value="1"/>
+					<Rotation value="301"/>
+					<RotationAxis x="0" y="1.0000000000000002" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+		</Result>
+		<Blend id="blend 01">
+			<Mode value="0"/>
+			<Foreground red="0" green="0" blue="0" alpha="1"/>
+			<Background source="distort 01" red="0" green="0" blue="0" alpha="1"/>
+			<Opacity source="threshold 01" value="0.5"/>
+		</Blend>
+		<Blend id="blend 02">
+			<Mode value="0"/>
+			<Foreground source="image 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background source="blend 03" red="1" green="1" blue="1" alpha="1"/>
+			<Opacity source="invert 02" value="0.5"/>
+		</Blend>
+		<Blend id="blend 03">
+			<Mode value="0"/>
+			<Foreground red="0" green="0" blue="0" alpha="1"/>
+			<Background source="blend4 01" red="0" green="0" blue="0" alpha="1"/>
+			<Opacity source="invert 01" value="1"/>
+		</Blend>
+		<Blend4 id="blend4 01">
+			<Mode value="0"/>
+			<Foreground source="perlinnoise 01" red="1" green="1" blue="1" alpha="1"/>
+			<Background red="0" green="0" blue="0" alpha="0"/>
+			<Opacity source="checkboxcontrol 01" value="0.5">
+				<Checked value="1"/>
+				<Unchecked value="0"/>
+			</Opacity>
+		</Blend4>
+		<Blur id="blur 01">
+			<Source source="threshold 01"/>
+			<Radius value="0.014999999999999999"/>
+			<Gaussian value="false"/>
+		</Blur>
+		<CheckboxControl id="checkboxcontrol 01">
+			<Name value-en="Background"/>
+			<UseRemapping value="false"/>
+			<Checked value="true"/>
+		</CheckboxControl>
+		<ColorControl id="colorcontrol 01">
+			<Name value-en="Bottom Layer 1"/>
+			<UseRemapping value="false"/>
+			<Color red="0.93" green="0.89" blue="0.78" alpha="1"/>
+		</ColorControl>
+		<ColorControl id="colorcontrol 02">
+			<Name value-en="Bottom Layer 2"/>
+			<UseRemapping value="false"/>
+			<Color red="0.62" green="0.51" blue="0.39" alpha="1"/>
+		</ColorControl>
+		<NoiseDistortion id="distort 01">
+			<Source source="stones 01"/>
+			<Distortion value="0.029999999999999999"/>
+			<Roughness value="0.5"/>
+			<Scale value="2.2000000000000002"/>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="0.29999999999999999"/>
+			<Variation value="1"/>
+		</NoiseDistortion>
+		<Image id="image 01"/>
+		<Invert id="invert 01">
+			<Source source="blur 01"/>
+			<Invert value="true"/>
+		</Invert>
+		<Invert id="invert 02">
+			<Source source="threshold 01"/>
+			<Invert value="true"/>
+		</Invert>
+		<PerlinNoise id="perlinnoise 01">
+			<Noise source="colorcontrol 01" red="1" green="1" blue="1" alpha="0"/>
+			<Background source="colorcontrol 02" red="0" green="0" blue="0" alpha="0"/>
+			<Roughness value="0.92000000000000004"/>
+			<Scale value="1.98"/>
+			<Stretch value="0.40999999999999998"/>
+			<Angle value="90"/>
+			<Details value="1"/>
+			<Contrast value="0.78000000000000003"/>
+			<Variation value="1"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<PerlinNoise id="perlinnoise 02">
+			<Noise red="0.5" green="0.5" blue="0.5" alpha="1"/>
+			<Background red="0.10000000000000001" green="0.10000000000000001" blue="0.10000000000000001" alpha="1"/>
+			<Roughness value="0"/>
+			<Scale value="2.6699999999999999"/>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="0"/>
+			<Contrast value="0.25"/>
+			<Variation value="1"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<PerlinNoise id="perlinnoise 03">
+			<Noise red="1" green="1" blue="1" alpha="1"/>
+			<Background red="0" green="0" blue="0" alpha="1"/>
+			<Roughness value="0"/>
+			<Scale value="2.6699999999999999"/>
+			<Stretch value="0"/>
+			<Angle value="0"/>
+			<Details value="0"/>
+			<Contrast value="0.25"/>
+			<Variation value="1"/>
+			<OctaveCurve value="0"/>
+		</PerlinNoise>
+		<SliderControl id="slidercontrol 01">
+			<Name value-en="Coverage"/>
+			<UseRemapping value="true"/>
+			<Value value="0.83"/>
+		</SliderControl>
+		<StepCurve id="stepcurve 01">
+			<Threshold value="0.28000000000000003"/>
+			<Smooth value="1"/>
+			<Shape value="0.73999999999999999"/>
+			<Linear value="false"/>
+			<Invert value="false"/>
+		</StepCurve>
+		<Stones id="stones 01">
+			<Noise red="0" green="0" blue="0" alpha="1"/>
+			<Background source="perlinnoise 03" red="1" green="1" blue="1" alpha="1"/>
+			<Roughness source="perlinnoise 02" value="0.29999999999999999"/>
+			<Contrast value="0"/>
+			<Formula value="1"/>
+			<Scale value="2.5"/>
+			<Stretch value="0"/>
+			<VerticalStretch value="false"/>
+			<Flat value="true"/>
+			<SolidFill value="false"/>
+			<Details value="0.5"/>
+			<Variation value="1"/>
+			<OctaveCurve source="stepcurve 01" value="0"/>
+		</Stones>
+		<Threshold id="threshold 01">
+			<Source source="distort 01"/>
+			<Threshold source="slidercontrol 01" value="0.14999999999999999">
+				<Minimum value="0.029999999999999999"/>
+				<Maximum value="0.10000000000000001"/>
+			</Threshold>
+			<Smooth value="0"/>
+			<Low red="0" green="0" blue="0" alpha="1"/>
+			<High red="1" green="1" blue="1" alpha="1"/>
+		</Threshold>
+	</Components>
+	<GroupNames/>
+	<SettingsOverride>
+		<Size value="0"/>
+		<Variation value="0"/>
+		<Seamless value="0"/>
+		<ResultBlending value="0"/>
+	</SettingsOverride>
+	<Presets>
+		<DefaultPreset preview_image="LIFESAVER_OPAQUE">
+			<Settings size_factor="1.12" variation="21539" seamless="false" antialiasing="2" map_type="0" edges_only="true" clip_hdr_for_result="true"/>
+			<Lighting>
+				<Height value="0.25"/>
+				<Environment>
+					<Source value="Church"/>
+					<Brightness value="1.7"/>
+					<Saturation value="1"/>
+					<Rotation value="301"/>
+					<RotationAxis x="0" y="1.0000000000000002" z="0"/>
+				</Environment>
+				<Ambience>
+					<AmbientLight red="0" green="0" blue="0"/>
+					<Shadowing value="0"/>
+					<CurrentOcclusionSettings>
+						<RayDirections value="4"/>
+						<TraceDistance value="0.20000000000000001"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="0"/>
+						<ROQuality value="3"/>
+					</CurrentOcclusionSettings>
+					<CustomOcclusionSettings>
+						<RayDirections value="16"/>
+						<TraceDistance value="0.29999999999999999"/>
+						<RayJittering value="true"/>
+						<RayBounce value="true"/>
+						<AvoidStreaks value="true"/>
+						<DirectSamples value="1"/>
+						<ROQuality value="10"/>
+					</CustomOcclusionSettings>
+					<ArtisticSettings>
+						<BlackPoint value="0"/>
+						<Midtones value="0.5"/>
+						<WhitePoint value="1"/>
+					</ArtisticSettings>
+				</Ambience>
+			</Lighting>
+			<Controls>
+				<CheckboxControl id="checkboxcontrol 01">
+					<Checked value="true"/>
+				</CheckboxControl>
+				<ColorControl id="colorcontrol 01">
+					<Color red="0.60864300000000005" green="0.66666700000000001" blue="0.59173100000000001" alpha="1"/>
+				</ColorControl>
+				<ColorControl id="colorcontrol 02">
+					<Color red="0.27224900000000002" green="0.31782899999999997" blue="0.29175800000000002" alpha="1"/>
+				</ColorControl>
+				<SliderControl id="slidercontrol 01">
+					<Value value="0.80000000000000004"/>
+				</SliderControl>
+			</Controls>
+		</DefaultPreset>
+	</Presets>
+	<Information author="Alex" name-en="Peeling Paint mod" url="" description-en="A peeling paint effect, cool-looking but very slow to render. The updated version allows to turn off the wooden background and replace it with transparent areas -- thanks to Evgeny &quot;Helionaut&quot; Nikolskiy for the fix." keywords-en="peel peeling paint cracks crack old rust rusty weathered" update_notes-en="Optional transparency for the background, a fix by Evgeny &quot;Helionaut&quot; Nikolskiy." major_version="4" minor_version="14"/>
+	<ControlsOrder>
+		<Automatic value="true"/>
+	</ControlsOrder>
+	<FilterEditor>
+		<Groups/>
+		<ThumbnailSize value="0"/>
+		<Canvas left="-142" top="-950" zoom_factor="1"/>
+		<Viewport left="26" top="0" zoom_factor="2"/>
+		<LockPreview>
+			<Locked value="false"/>
+			<LockedComponent name=""/>
+		</LockPreview>
+		<Item id="blend 01">
+			<Position left="91" top="166"/>
+		</Item>
+		<Item id="blend 02">
+			<Position left="-96" top="-128"/>
+		</Item>
+		<Item id="blend 03">
+			<Position left="16" top="-400"/>
+		</Item>
+		<Item id="blend4 01">
+			<Position left="297" top="-612"/>
+		</Item>
+		<Item id="blur 01">
+			<Position left="544" top="-384"/>
+		</Item>
+		<Item id="checkboxcontrol 01">
+			<Position left="554" top="-726"/>
+		</Item>
+		<Item id="colorcontrol 01">
+			<Position left="825" top="-650"/>
+		</Item>
+		<Item id="colorcontrol 02">
+			<Position left="825" top="-575"/>
+		</Item>
+		<Item id="distort 01">
+			<Position left="1104" top="-256"/>
+		</Item>
+		<Item id="image 01">
+			<Position left="550" top="-225"/>
+		</Item>
+		<Item id="invert 01">
+			<Position left="304" top="-400"/>
+		</Item>
+		<Item id="invert 02">
+			<Position left="512" top="144"/>
+		</Item>
+		<Item id="perlinnoise 01">
+			<Position left="550" top="-600"/>
+		</Item>
+		<Item id="perlinnoise 02">
+			<Position left="1625" top="-225"/>
+		</Item>
+		<Item id="perlinnoise 03">
+			<Position left="1625" top="-425"/>
+		</Item>
+		<Item id="result">
+			<Position left="-432" top="16"/>
+		</Item>
+		<Item id="slidercontrol 01">
+			<Position left="1125" top="75"/>
+		</Item>
+		<Item id="stepcurve 01">
+			<Position left="1625" top="-25"/>
+		</Item>
+		<Item id="stones 01">
+			<Position left="1325" top="-250"/>
+		</Item>
+		<Item id="threshold 01">
+			<Position left="850" top="-25"/>
+		</Item>
+	</FilterEditor>
+</Filter>
