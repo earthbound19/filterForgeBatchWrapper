@@ -1,2 +1,0 @@
-Appendix to first post: https://filterforge.com/forum/read.php?FID=5&TID=13617&MID=136946#message136946
-. . . This is because I opted to have each image file name bear the name of the variation . . . but now I wonder if I'd rather have an option that overrides that to give file numbering suitable for animation.
