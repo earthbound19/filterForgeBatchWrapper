@@ -31,7 +31,7 @@ IsEmpty(Dir) {
 ; ---- Reload this script and restart execution whenever CTRL+ALT+? (/) is typed:
 ; #Persistent		; So that auto-reload include will even work (because the script is still running).
 ; GoSub START
-; #Include C:\_devtools\include\devReloadOnSave.ahk
+; #Include C:\_ebDev\include\devReloadOnSave.ahk
 ; START:
 ; ---- END AUTO-RELOAD INCLUDE
 ; END DEV-ONLY INCLUDE: DELETE UPON DISTRIBUTION
@@ -72,14 +72,14 @@ If (%fileExists% == 0)
 	{
 ; TO DO? : have this conditional for each possible item in the .ini, meaning, check for and create (if necessary) each .ini setting?
 	EnvGet, Roaming, APPDATA
-	IniWrite, C:\Program Files (x86)\Filter Forge 4\Bin\FFXCmdRenderer-x86.exe, %iniFileName%, Paths, FFXCmdRenderer-x86.exe with PATH
+	IniWrite, C:\Program Files\Filter Forge 7\Bin\FFXCmdRenderer-x64.exe, %iniFileName%, Paths, FFXCmdRenderer exe file name with PATH
 ; TO DO: Make the following so (it's something else for now), after coding filter auto-indexing and copy/paste:
 	; IniWrite, %A_ScriptDir%\FF_installed_filter_names.txt, %iniFileName%, Paths, Filter List File Name
 	IniWrite, %A_ScriptDir%\FFfilterList.txt, %iniFileName%, Paths, Filter List File Name
 	IniWrite, %A_ScriptDir%\FilterForgeBatchTemplate.xml, %iniFileName%, Paths, Filter Forge Batch Template XML file
 	IniWrite, %A_ScriptDir%, %iniFileName%, Paths, Working Directory
-	IniWrite, %Roaming%\Filter Forge 4\System\Library, %iniFileName%, Paths, Filters Library Path
-	IniWrite, %Roaming%\Filter Forge 4\My Filters, %iniFileName%, Paths, My Filters Path
+	IniWrite, %Roaming%\Filter Forge 7\System\Library, %iniFileName%, Paths, Filters Library Path
+	IniWrite, %Roaming%\Filter Forge 7\My Filters, %iniFileName%, Paths, My Filters Path
 	IniWrite, %A_ScriptDir%\srcImg, %iniFileName%, Paths, Source Images Directory
 	IniWrite, %A_ScriptDir%\sourceImagesList.txt, %iniFileName%, Paths, Source Images List File
 ; TO DO? : make an option for a per image file path? First do default to /ff_output?
@@ -119,7 +119,7 @@ If (%fileExists% == 0)
 
 ; READ INI FILE VALUES INTO LOCAL VALUES.
 	;Reference: IniRead, OutputVar, Filename, Section, Key [, Default]
-	IniRead, FFXCmdRendererX86exeWithPATH, %iniFileName%, Paths, FFXCmdRenderer-x86.exe with PATH
+	IniRead, FFXCmdRendererEXEfileNameWithPATH, %iniFileName%, Paths, FFXCmdRenderer exe file name with PATH
 	IniRead, filterListFileName, %iniFileName%, Paths, Filter List File Name
 	IniRead, FilterForgeBatchTemplateXMLfile, %iniFileName%, Paths, Filter Forge Batch Template XML file
 	IniRead, workingDirectory, %iniFileName%, Paths, Working Directory
@@ -352,7 +352,7 @@ for sourceImagesListArrayIndex, imageFileName in sourceImagesListArray
 	Random, randomVariation, Min, Max
 			; MsgBox, num picked is %randomVariation%
 	; CHECK FOR PREEXISTENCE OF TARGET RENDER FILE NAMES; IF THEY EXIST, SKIP THIS RENDER. OTHERWISE, RENDER.
-	checkFile = %resultImagesDirectory%\%imageFileName%_ff_%filterFileName%_pre%presetValue%_var%randomVariation%.tif
+	checkFile = %resultImagesDirectory%\%imageFileName%_ff_%filterFileName%_pre%presetValue%_var%randomVariation%.png
 	renderingCheckFile = %checkFile%.rendering
 	IfNotExist, %renderingCheckFile%
 		{
@@ -412,7 +412,7 @@ for sourceImagesListArrayIndex, imageFileName in sourceImagesListArray
 			; StringReplace, OutputVar, InputVar, SearchText [, ReplaceText, ReplaceAll?]
 			StringReplace, XMLfileString, XMLfileString, Library.ffxml, %batchNameFullPath%.ffxml
 			StringReplace, XMLfileString, XMLfileString, img.jpg, %sourceImagesDirectory%\%imageFileName%
-			StringReplace, XMLfileString, XMLfileString, ff_output\img_out.tif, %resultImagesDirectory%\%batchName%.tif
+			StringReplace, XMLfileString, XMLfileString, ff_output\img_out.png, %resultImagesDirectory%\%batchName%.png
 			; NOTE: This next line of code is necessary because the filter count in the xml batch is (ridiculously) at zero-based index (2 is designated with 1, 1 is designated with 0); ALSO NOTE that if we simply substract from presetValue and store the result in itself, the filter preset will change by -1 with every iteration of this loop. No thanks, wan't to keep the preset specified:
 			xmlZeroBasedPresetValue = %presetValue%
 			xmlZeroBasedPresetValue -= 1
@@ -428,7 +428,7 @@ for sourceImagesListArrayIndex, imageFileName in sourceImagesListArray
 			FileCreateDir, %resultImagesDirectory%
 			FileAppend,, %renderingCheckFile%
 			; RENDER! :
-							; MsgBox, command is: %FFXCmdRendererX86exeWithPATH% %workingDirectory%\batch.xml
+							; MsgBox, command is: %FFXCmdRendererEXEfileNameWithPATH% %workingDirectory%\batch.xml
 					; Reference: ToolTip [, Text, X, Y, WhichToolTip]
 					compString := varize(imageFileName)
 							; MsgBox, compString value is: %compString%
@@ -443,8 +443,8 @@ for sourceImagesListArrayIndex, imageFileName in sourceImagesListArray
 					
 			; UNCOMMENT THE FOLLOWING LINE IN PRODUCTION! IN ALL CAPS!
 					; No, not the following indented line! The one after it! ffxml renderer exe name is: FFXCmdRenderer-x86.exe
-					; MsgBox COMMAND IS:`n`nRunWait, %FFXCmdRendererX86exeWithPATH% %batchNameFullPath%.xml, %workingDirectory%, %whetherHide%
-			RunWait, "%FFXCmdRendererX86exeWithPATH%" "%batchNameFullPath%.xml", %workingDirectory%, %whetherHide%
+					; MsgBox COMMAND IS:`n`nRunWait, %FFXCmdRendererEXEfileNameWithPATH% %batchNameFullPath%.xml, %workingDirectory%, %whetherHide%
+			RunWait, "%FFXCmdRendererEXEfileNameWithPATH%" "%batchNameFullPath%.xml", %workingDirectory%, %whetherHide%
 			rendered += 1
 			FileDelete, %renderingCheckFile%
 
