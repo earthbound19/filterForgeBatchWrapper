@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tasks>
+   <Task>
+      <Image value="img.jpg" />
+      <Selection value="" />
+      <Result path="ff_output\img_out.png" format="PNG" />
+      <Filter value="Library.ffxml" />
+      <Preset value="1" />
+   </Task>
+   <GlobalSettings>
+      <RenderingOptions>
+         <UseMultithreading value="true" />
+         <Dither value="true" />
+         <Progressive value="false" />
+         <OptimizeBlurs value="true" />
+         <AntiAliasBitmapComponentSources value="false" />
+         <Jitter value="0" />
+         <TemporaryFilesLocation value="C:\Windows\Temp" />
+         <RAMUsageLimit value="77" />
+         <NormalMapFlipY value="false" />
+      </RenderingOptions>
+      <BitmapFormatOptions>
+         <DefaultFormat value="PNG" />
+         <BMP>
+            <BitDepth value="32" />
+            <FlipRowOrder value="false" />
+         </BMP>
+         <JPG>
+            <Quality value="98" />
+            <FullPrecision value="true" />
+         </JPG>
+         <TIF>
+            <BitDepth value="8" />
+            <FloatFormat value="false" />
+            <IncludeTransparency value="false" />
+            <ImageCompression value="NONE" />
+         </TIF>
+         <TGA>
+            <BitDepth value="32" />
+            <IncludeTransparency value="true" />
+            <FlipRowOrder value="false" />
+         </TGA>
+         <PNG>
+            <BitDepth value="16" />
+            <IncludeTransparency value="true" />
+            <ImageCompression value="NONE" />
+         </PNG>
+         <EXR>
+            <BitDepth value="32" />
+            <IncludeTransparency value="true" />
+            <ImageCompression value="PIZ" />
+            <FlipRowOrder value="false" />
+         </EXR>
+         <PFM />
+      </BitmapFormatOptions>
+      <Gamma>
+         <GammaValue value="2.2" />
+         <GammaCorrection value="true" />
+      </Gamma>
+   </GlobalSettings>
+</Tasks>
