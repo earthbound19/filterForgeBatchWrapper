@@ -53,6 +53,8 @@ First release, essential features complete. Program first in satisfactory shape 
 # Development Notes and TO DO
 
 ## TO DO
+- Add notes (in documentation) about custom presets [from here](https://www.filterforge.com/forum/read.php?FID=8&TID=15506&MID=150867#message150867)
+- Helpful error messages about wrong paths in INI, or what else?
 - Automatically build a filter list (to invoke via copy/paste from generated list into .ini file/summat) (A note here said I had that in development?) (Is this a redundant to do item?)
 - Distinguish custom users filters from installed filters (or simply list all of them); specify custom filter by full path.
 	- A hurdle to overcome with this is that as of Filter Forge version X (uknown--I see it in 7), user presets for filters are stored in ~`\AppData\Roaming\Filter Forge 7\My Presets`, and the command line renderer doesn't use them if you put the _apparent_ preset number (from the preset list view in Filter Forge) in the `.ini` file.
