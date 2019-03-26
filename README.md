@@ -62,6 +62,8 @@ First release, essential features complete. Program first in satisfactory shape 
 - Override preset used per filter, via console, or .ini file or summat.
 - Should a source images list (besides perhaps a temp file) even be generated--doesn't this just do all of that in memory regardless?
 - Retroactive version releases in GitHub and move these notes there? Feasible? Git history etc. detailed enough to support?
+- Toast `sourceImagesList.txt` and other (?) extraneous tracked files from git history (and untrack them and add them to `.gitignore` if need be)
+- set up a project tracker at GitHub?
 
 ## Known issues
 - Despite some bug fixes for the issue, it may still be that source image and .ffxml file names that include spaces in the file name could fail to render. It's a good idea to always make your file names internet friendly to begin with; it solves this and other problems.
